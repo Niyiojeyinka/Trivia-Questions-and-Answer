@@ -1,0 +1,30 @@
+
+---admin dashboard
+---later affilate link
+---user managing function
+---notifcation on every withdrawal process
+---image type question and answer support in question page a must
+---at first desktop version talk about how business can user pryper to advertise and sponsor a game with contact us,tos,privacy. 
+
+
+PROBLEM of MULTi account
+    solution 
+--set time in such a way that it wont favour multiple participation
+--delete multiple account
+
+       code snippet
+-----------------------------------------------------
+         //insert to history
+$details = "You make a withdrawal Request of 
+".$data['user']['account_bal']." with reference ".$ref;
+      $h_dat =  array(
+        'details' => $details,
+        'action' => 'w_request' ,
+        'user_id' => $_SESSION['id'],
+        'time' => time()
+         );
+
+
+      $this->users_model->insert_to_history($h_dat);
+-----------------------------------------------------
+---on deploy change the neccessary key
